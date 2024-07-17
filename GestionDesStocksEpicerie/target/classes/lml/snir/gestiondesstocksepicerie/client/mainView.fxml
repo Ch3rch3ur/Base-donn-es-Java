@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="803.0" prefWidth="1222.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lml.snir.gestiondesstocksepicerie.client.MainControler">
+    <children>
+        <MenuBar prefHeight="27.0" prefWidth="1104.0" VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>                        
+                        <MenuItem mnemonicParsing="false" onAction="#onMenuFileQuitClick" text="Quit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Add">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#onMenuAddProduitClick" text="Produit" />
+                        <MenuItem mnemonicParsing="false" onAction="#onMenuAddCategorieClick" text="Catégorie" />
+                        <MenuItem mnemonicParsing="false" onAction="#onMenuAddMagazinClick" text="Magazin" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#onMenuEditProduitClick" text="Produit" />
+                        <MenuItem mnemonicParsing="false" onAction="#onMenuEditCategorieClick" text="Catégorie" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Remove">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#onMenuRemoveProduitClick" text="Produit" />
+                        <MenuItem mnemonicParsing="false" onAction="#onMenuRemoveCategorieClick" text="Catégorie" />
+                        <MenuItem mnemonicParsing="false" onAction="#onMenuRemoveMagazinClick" text="Magazin" />
+                    </items>                    
+                </Menu>                
+                <Menu mnemonicParsing="false" text="Find">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#onMenuFindProduitClick" text="Produit" />
+                        <MenuItem mnemonicParsing="false" onAction="#onMenuFindCategorieClick" text="Catégorie" />
+                        <MenuItem mnemonicParsing="false" onAction="#onMenuFindMagazinClick" text="Magazin" />
+                    </items>    
+                </Menu>
+            </menus>
+        </MenuBar>
+        <HBox prefHeight="773.0" prefWidth="1222.0">
+            <children>
+                <VBox prefHeight="250.0" prefWidth="900.0">
+                    <children>
+                        <HBox>
+                            <children>
+                                
+                                <VBox prefHeight="250.0" prefWidth="900.0">
+                                    <HBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </HBox.margin>
+                           <children>
+                                      <VBox prefHeight="250.0" prefWidth="900.0">
+                                          <children>
+                                              <Label text="Produit">
+                                                  <VBox.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                  </VBox.margin>
+                                              </Label>
+                                              <TableView fx:id="tableProduit" minHeight="150.0" prefHeight="170.0" prefWidth="937.0">                                            
+                                           
+                                        </TableView>
+                                              <Pagination fx:id="paginationProduit" prefHeight="200.0" prefWidth="900.0">
+                                                  <VBox.margin>
+                                                      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                  </VBox.margin>
+                                              </Pagination>
+                                          </children>
+                                      </VBox>
+                           </children>
+                                </VBox>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </VBox.margin>
+                        </HBox>
+                            <Label text="Catégorie">
+                                <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                </VBox.margin>
+                            </Label>
+                            <TableView fx:id="tableCategorie" minHeight="150.0" prefHeight="250.0" prefWidth="868.0">                                            
+                                            
+                                        </TableView>
+                            <Pagination fx:id="paginationCategorie" prefHeight="64.0" prefWidth="965.0">
+                                <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                </VBox.margin>
+                            </Pagination>
+                    </children>
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </HBox.margin>
+                </VBox>
+                <VBox prefHeight="773.0" prefWidth="353.0">
+                    <children>
+                        <Label text="Magazin">
+                            <VBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label fx:id="labelProduitSeleted" text="">
+                            <VBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Label fx:id="labelCategorieSeleted" text="">
+                            <VBox.margin>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </VBox.margin>
+                        </Label>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</VBox>
